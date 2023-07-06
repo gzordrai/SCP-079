@@ -4,7 +4,7 @@ import { ICommand } from "../bot";
 export const command: ICommand = {
     data: new SlashCommandBuilder()
         .setName("hello")
-        .setDescription("test"),
+        .setDescription("say hello"),
     async execute(interaction: ChatInputCommandInteraction): Promise<void> {
 
         await interaction.followUp({content:"Hello"});
