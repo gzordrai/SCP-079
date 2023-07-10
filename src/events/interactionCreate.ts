@@ -1,5 +1,6 @@
 import { Events, Interaction } from "discord.js";
 import { ExtendedClient, ICommand, IEvent } from "../bot";
+import { buttonHandler } from "../handlers";
 
 const event: IEvent = {
     name: Events.InteractionCreate,
@@ -13,14 +14,7 @@ const event: IEvent = {
                 await command.execute(interaction, client);
             } else if (interaction.isButton()) {
                 await interaction.deferReply();
-                switch(interaction.customId) {
-                    case "jdr-1":
-                        console.log("azeaze");
-                        break;
-                    case "jdr-2":
-                        console.log("2azeaz");
-                        break;
-                }
+                await buttonHandler(interaction);
             }
         }
     },
