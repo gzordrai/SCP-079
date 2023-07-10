@@ -11,6 +11,16 @@ const event: IEvent = {
 
                 await interaction.deferReply();
                 await command.execute(interaction, client);
+            } else if (interaction.isButton()) {
+                await interaction.deferReply();
+                switch(interaction.customId) {
+                    case "jdr-1":
+                        console.log("azeaze");
+                        break;
+                    case "jdr-2":
+                        console.log("2azeaz");
+                        break;
+                }
             }
         }
     },
