@@ -1,6 +1,6 @@
 import { Events, Interaction } from "discord.js";
 import { ExtendedClient, ICommand, IEvent } from "../bot";
-import { buttonHandler } from "src/handlers/buttons";
+import { buttonHandler } from "../handlers/";
 
 const event: IEvent = {
     name: Events.InteractionCreate,
